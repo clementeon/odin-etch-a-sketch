@@ -48,17 +48,11 @@ reset.addEventListener("click", () => {
 size.addEventListener("click", () => {
     const input = prompt("Eneter a size from 1 to 99", "64");
     if (input >= 1 && input <= 99) {
-        resetGrid();
+        container.innerHTML = "";
         makeGrid(input);
         gridHover();
     }
 });
-
-function resetGrid() {
-    container.querySelectorAll(".box").forEach((square) => {
-        square.remove();
-    });
-}
 
 makeGrid(edge);
 gridHover();

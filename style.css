@@ -14,10 +14,11 @@ body {
     height: 600px;
     display: flex;
     background-color: white;
+    user-select: none;
 }
 
 .box {
-  transition: background-color 0.5s ease;
+    display: flex;
 }
 
 .options {
