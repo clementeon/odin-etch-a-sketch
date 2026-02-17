@@ -9,8 +9,8 @@ function makeGrid(size) {
         const newDiv = document.createElement("div");
         for (let j = 0; j < size; j++) {
             const newbox = document.createElement("div");
-            newbox.style.width = `${containerSize/size}px`;
-            newbox.style.height = `${containerSize/size}px`;
+            newbox.style.width = `${containerSize / size}px`;
+            newbox.style.height = `${containerSize / size}px`;
             newbox.style.border = "1px solid black";
             newbox.classList.add("box");
             if (i == 0) {
@@ -31,21 +31,16 @@ function makeGrid(size) {
     }
 }
 
-
-
 function gridHover() {
-
-    const boxes = document.querySelectorAll(".box");
-    boxes.forEach((square) => {
-        square.addEventListener("mouseover", () => {
+    container.querySelectorAll(".box").forEach((square) => {
+        square.addEventListener("mouseenter", () => {
             square.style.backgroundColor = "#28282B";
         });
     });
 }
 
 reset.addEventListener("click", () => {
-    const boxes = document.querySelectorAll(".box");
-    boxes.forEach((square) => {
+    container.querySelectorAll(".box").forEach((square) => {
         square.style.backgroundColor = "";
     });
 });
@@ -60,8 +55,7 @@ size.addEventListener("click", () => {
 });
 
 function resetGrid() {
-    const boxes = document.querySelectorAll(".box");
-    boxes.forEach((square) => {
+    container.querySelectorAll(".box").forEach((square) => {
         square.remove();
     });
 }
